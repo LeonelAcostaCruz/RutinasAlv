@@ -1,0 +1,83 @@
+
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="subtitulo">
+      BODY GYM COMENTARIOS
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="openMenu()">
+        <ion-icon color="primary" slot="icon-only" name="menu-sharp"></ion-icon>
+      </ion-button>
+      </ion-buttons>
+  </ion-toolbar>  
+</ion-header>
+
+<div style="text-align: end; margin: 10px;">
+  
+  <ion-button  (click)="nuevo()" class="normal" color="success"> Nuevo </ion-button>
+</div>
+
+  <ion-content>
+    <div *ngIf="enableNewComentario">
+      
+    
+  <ion-item>
+    <ion-buttons slot="end">
+      <ion-button (click)="enableNewComentario = false">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>     
+  </ion-item>
+  <h3 class="subtitulo  encabezado">Ingresa Datos de tu Comentario</h3>
+
+  <ion-item>
+    </ion-item>
+    <ion-item> 
+    <ion-label class="ion-text-left">
+        Nombre:
+    </ion-label>
+    <ion-input [(ngModel)]="newComentario.nombre"  class="normal" type="text" inputmode="text">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="ion-text-left">
+        Correo:
+    </ion-label>
+    <ion-input [(ngModel)]="newComentario.correo" class="normal" type="text" inputmode="text">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="ion-text-left">
+      Comentario:
+    </ion-label>
+    <ion-input [(ngModel)]="newComentario.comentario" class="normal" type="text" inputmode="text">
+    </ion-input>
+  </ion-item>
+
+  <ion-button style="margin: 30px" expand="full"color="primary"(click)="guardarcomentario() ">
+    enviar
+    </ion-button>
+  </div>
+
+
+  
+  <ion-item *ngFor="let comentario of comentarios">
+      
+      <ion-label class="normal"> {{comentario.nombre}}</ion-label>
+      <ion-label class="normal"> {{comentario.correo}}</ion-label>
+        <ion-buttons slot ="end">
+           <ion-button (click)="newComentario = comentario; enableNewComentario = true;">
+              <ion-icon slot="icon-only" color="primary"  name="create-sharp"></ion-icon>
+           </ion-button>
+           <ion-button (click)="deleteComentario(comentario)"> 
+              <ion-icon slot="icon-only" color="danger" name="trash-bin"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+  </ion-item>
+
+</ion-content>
