@@ -10,7 +10,7 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 export class HomeComponent implements OnInit {
   private path = 'Productos/';
 
-  videoId = "";
+
 
   constructor(public menucontroler: MenuController,
     public firestoreService: FirestoreService) {
