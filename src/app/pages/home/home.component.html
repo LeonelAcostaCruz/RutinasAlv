@@ -1,23 +1,32 @@
 <ion-header>
   <ion-toolbar>
     <ion-title class="subtitulo">
-      BODY GYM 
+      BODY GYM
     </ion-title>
 
     <ion-buttons slot="start">
       <ion-button (click)="openMenu()">
         <ion-icon color="primary" slot="icon-only" name="menu-sharp"></ion-icon>
       </ion-button>
-      </ion-buttons>
+    </ion-buttons>
 
 
-      <ion-buttons slot="end">
-        <ion-button [routerLink]="['/perfil']">
-          <ion-icon color="primary" slot="icon-only" name="person-circle"></ion-icon>
-        </ion-button>
-        </ion-buttons>
-
-
-
-  </ion-toolbar>  
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/perfil']">
+        <ion-icon color="primary" slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
+
+<ion-content>
+  <div class="video"> <!--video-->
+    <div>
+      <iframe width="420" height="350" src="https://www.youtube.com/embed/HQfF5XRVXjU?si=xFil4Hlj4eCOASoA"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+  </div>
+</ion-content>

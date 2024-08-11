@@ -7,17 +7,18 @@ import { FirestoreService } from 'src/app/services/firestore.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent  implements OnInit {
-private path = 'Productos/';
-  
+export class HomeComponent implements OnInit {
+  private path = 'Productos/';
+
+  videoId = "";
+
   constructor(public menucontroler: MenuController,
-              public firestoreService: FirestoreService) {
-                 
+    public firestoreService: FirestoreService) {
+
     this.loadProductos();
-    
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   openMenu() {
     console.log('open menu');
@@ -25,7 +26,7 @@ private path = 'Productos/';
   }
 
   loadProductos() {
-    this.firestoreService.getCollection(this.path).subscribe( res => {
+    this.firestoreService.getCollection(this.path).subscribe(res => {
       console.log(res);
     });
   }

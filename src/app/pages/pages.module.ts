@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { PerfilComponent } from './perfil/perfil.component';
 import { FormsModule } from '@angular/forms';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 
 
@@ -13,12 +14,13 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     PerfilComponent
   ],
-  
+
   imports: [
     CommonModule,
     IonicModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    YouTubePlayerModule
   ]
 })
 export class PagesModule { }
