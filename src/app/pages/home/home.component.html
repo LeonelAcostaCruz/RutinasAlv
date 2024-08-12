@@ -29,3 +29,10 @@
     </div>
   </div>
 </ion-content>
+
+<ion-content>
+  <google-map width="95%" height="300px" [center]="center" [zoom]="zoom">
+    <map-marker [position]="markerPosition" [options]="markerOptions">
+    </map-marker>
+  </google-map>
+</ion-content>

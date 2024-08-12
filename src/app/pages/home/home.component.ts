@@ -10,6 +10,11 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 export class HomeComponent implements OnInit {
   private path = 'Productos/';
 
+  center: google.maps.LatLngLiteral = { lat: 31.591833, lng: -106.402583 };
+  zoom = 15;
+  markerOptions: google.maps.MarkerOptions = { draggable: false };
+  markerPosition: google.maps.LatLngLiteral = this.center;
+  markers: google.maps.Marker[] = [];
 
 
   constructor(public menucontroler: MenuController,

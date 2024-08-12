@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { HomeComponent } from './pages/home/home.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -31,7 +31,8 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    GoogleMapsModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

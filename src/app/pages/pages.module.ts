@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { PerfilComponent } from './perfil/perfil.component';
 import { FormsModule } from '@angular/forms';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 
 
@@ -20,7 +21,8 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     IonicModule,
     RouterModule,
     FormsModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    GoogleMapsModule
   ]
 })
 export class PagesModule { }
